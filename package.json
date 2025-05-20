@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
+    "deploy": "rm -rf node_modules/.cache && next build && touch out/.nojekyll && gh-pages -d out -t true",
     "start": "next start",
     "lint": "next lint"
   },
