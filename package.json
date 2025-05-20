@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://woosi8.github.io/HTN_login_projects/",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "predeploy": "npm run build",
-    "deploy": "rm -rf node_modules/.cache && next build && touch out/.nojekyll && gh-pages -d out -t true",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
