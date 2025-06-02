@@ -1,18 +1,19 @@
 import AuthContext from "./context/AuthContext";
 import { Providers } from "./providers";
 
+import LayoutSwitcher from "./LayoutSwitcher";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={` mx-auto max-w-screen-md text-lg`}>
+    <html lang="ko">
+      <body>
         <Providers>
           <AuthContext>
-            {/* <Header /> */}
-            <main>{children}</main>
+            <LayoutSwitcher>{children}</LayoutSwitcher>
           </AuthContext>
         </Providers>
       </body>

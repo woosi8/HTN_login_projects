@@ -6,8 +6,6 @@ import { useAuthStore } from "… @/stores/authStore";
 export default function HomePage() {
   const { user, status } = useAuthStore();
 
-  console.log(user);
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* 히어로 섹션 */}
