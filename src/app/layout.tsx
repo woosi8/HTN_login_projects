@@ -1,4 +1,5 @@
 import AuthContext from "./context/AuthContext";
+import { Providers } from "./providers";
 
 export default function RootLayout({
   children,
@@ -8,10 +9,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` mx-auto max-w-screen-md text-lg`}>
-        <AuthContext>
-          {/* <Header /> */}
-          <main>{children}</main>
-        </AuthContext>
+        <Providers>
+          <AuthContext>
+            {/* <Header /> */}
+            <main>{children}</main>
+          </AuthContext>
+        </Providers>
       </body>
     </html>
   );
